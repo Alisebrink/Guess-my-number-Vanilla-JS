@@ -40,7 +40,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
     // Om din nuvarande score är högre än den tidigare highscore så sätts din som den nya
     if (score > highscore) {
-      let highscore = score;
+      highscore = score;
       // sätter den nya highscore som local storage
       localStorage.setItem('Highscore', highscore);
       highscoreQuery.textContent = highscore;
