@@ -13,7 +13,7 @@ const bodyQuery = document.querySelector('body');
 const guessQuery = document.querySelector('.guess');
 
 // On load the browser gets the highscore from local storage
-window.onload = function () {
+window.onload = () => {
   highscore = localStorage.getItem('Highscore');
   highscoreQuery.textContent = highscore;
 };
@@ -23,7 +23,7 @@ let displayResultMessage = (message) => {
 }
 
 // lyssnar efter ett klick på "Check"-knappen
-document.querySelector('.check').addEventListener('click', function () {
+document.querySelector('.check').addEventListener('click', () => {
   const guess = Number(guessQuery.value);
 
   // Om det inte finns någon input, alltså om det är 0
@@ -88,7 +88,7 @@ const resetGame = () => {
 };
 
 // Lyssnar efter ett klick på "Again"-knappen
-document.querySelector('.again').addEventListener('click', e => playAgain());
+document.querySelector('.again').addEventListener('click', () => playAgain());
 
 // Om du vill återställa hela spelet från början och sätta highscore till 0
-document.querySelector('.reset').addEventListener('click', e => resetGame());
+document.querySelector('.reset').addEventListener('click', () => resetGame());
